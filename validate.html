@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="">
+			<input type="text" name="username" id="" placeholder="max 10 char only" />
+			<input type="text" name="age" id="" placeholder="can't be empty" />
+			<input type="submit" value="Submit Data" />
+		</form>
+		<a href="https://google.com">google</a>
+	</body>
+	<script>
+let username =document.querySelector("[name='username']");
+let age =document.querySelector("[name='age']");
+
+document.forms[0].onsubmit =function(e){
+	let uservalid =false;
+	let agevalid =false;
+	
+	if(username.value !== "" &&username.value.length <=10){
+		uservalid=true;
+	}
+	if(age.value !==""){
+		agevalid =true;
+	}
+	if(uservalid==false || agevalid==false){
+		e.preventDefault();
+	}
+}
+
+
+
+
+
+//    let userinput =document.querySelector("[name='username']");
+    //console.log(userinput);
+//    let ageinput =document.querySelector("[name ='age']");
+    //console.log(ageinput);
+
+//		document.forms[0].onsubmit = function (e) {
+//			let uservalid = false;
+//			let agevalid = false;
+//
+/*
+      console.log(userinput.value);
+      console.log(userinput.value.length);
+*/
+
+//      if(userinput.value !== "" &&userinput.value.length ==10){
+//        userinput =true;
+//        console.log(userinput)
+//      }
+//
+//			if (uservalid === false || agevalid === false) {
+//				e.preventDefault();
+//			}
+//		};
+//
+//		document.links[0].onclick = function (event) {
+//			console.log(event);
+//			event.preventDefault();
+//		};
+	</script>
+</html>
